@@ -1,0 +1,38 @@
+#containertrovamisura {
+    display: flex;
+    justify-content: center;
+}
+
+#trovaMisura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffcc80;
+    width: 95%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.campo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trovaMisura select {
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 350px) {
+    #trovaMisura select {
+        width: 100%;
+    }
+}
