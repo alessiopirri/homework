@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: fit-content;
+}
+
+header {
+    background-image: url("../img/header2.jpg");
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+header::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+
+#logo:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header h1 {
+    z-index: 1;
+}
+
+nav {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a,
+.prodotti {
+    color: white;
+    font-size: 1em;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+header nav a:hover,
+.prodotti:hover {
+    color: rgb(0, 153, 255);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.prodotti div {
+    display: none;
+    position: absolute;
+}
+
+.prodotti a:hover {
+    color: rgb(78, 214, 255);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.prodotti:hover div {
+    display: flex;
+    flex-direction: column;
+    top: 43px;
+    left: 0px;
+    z-index: 2;
+}
+
+#hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburgermenu {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hamburgermenu.hidden {
+    display: none;
+}
+
+#hamburgermenu img {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/*
+#hamburgermenu * {
+    display: block;
+    padding-left: 0px;
+    color: black;
+}
+*/
+
+.hamburgeritem {
+    color: black;
+    padding: 10px 5px;
+}
+
+#collegamenti {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: rgb(0, 153, 255);
+    color: #fff;
+}
+
+.prodotti.button div {
+    width: 100%;
+}
+
+.profilo {
+    text-align: center;
+}
+
+.meteo {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    z-index: 2;
+    position: absolute;
+    margin-top: 220px;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.cittameteo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+    /* modifica */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+#colonne {
+    display: flex;
+    justify-content: space-around;
+    background-color: #272636;
+    width: 100%;
+}
+
+#nomematricola {
+    background-color: #1a1927;
+    width: 100%;
+    text-align: center;
+}
+
+.meteo img {
+    width: 50px;
+    height: 50px;
+}
+
+footer .colonna {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer strong {
+    width: fit-content;
+}
+
+@media (max-width: 1000px) {
+    #colonne {
+        flex-direction: column;
+    }
+    .colonna {
+        width: 100%;
+        text-align: center;
+    }
+    .meteo {
+        width: 90%;
+    }
+    footer strong {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    #collegamenti {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+}

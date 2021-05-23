@@ -1,0 +1,33 @@
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dati {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+#dati p {
+    margin-bottom: 0px;
+}
+
+#ordini table {
+    width: 100%;
+    text-align: left;
+    min-width: 1000px;
+}
+
+#ordini {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+#ordini div {
+    overflow-y: auto;
+}

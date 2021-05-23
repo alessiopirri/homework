@@ -1,0 +1,109 @@
+#containertrovamisura {
+    display: flex;
+    justify-content: center;
+}
+
+#trovaMisura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffcc80;
+    width: 95%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.campo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trovaMisura select {
+    width: 300px;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: calc(100%/3);
+    position: relative;
+    text-align: center;
+}
+
+.immagine {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.hidden,
+#modal-view.hidden {
+    display: none;
+}
+
+.titolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrello {
+    height: 30px;
+    width: 30px;
+    padding-left: 20px;
+}
+
+#modal-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accedimodale {
+    background-color: white;
+    width: fit-content;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+#noproduct {
+    padding-left: 10px;
+}
+
+@media (max-width: 350px) {
+    #trovaMisura select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .item {
+        width: 100%;
+    }
+}
